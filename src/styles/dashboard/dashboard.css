@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,600;0,700;1,500&display=swap");
 
-
 .dashboard-layout {
   background-color: #e5e5e5;
   height: 100vh;
@@ -40,11 +39,11 @@
   border-radius: 5px;
   font-family: "Avenir next", sans-serif;
   font-size: 14px;
-  color: #545F7D;
+  color: #545f7d;
   outline: none;
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
-  border: 1px solid #213F7D;
+  border: 1px solid #213f7d;
   height: 40px;
   opacity: 0.5;
   width: calc(100% - 56px);
@@ -52,8 +51,8 @@
   padding: 0px 12px;
 }
 .top-nav .search-input button {
-  background-color: #39CDCC;
-  color: #FFFFFF;
+  background-color: #39cdcc;
+  color: #ffffff;
   border-radius: 8px;
   border: none;
   padding: 15px 20px;
@@ -65,7 +64,7 @@
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
   width: 56px;
-  background-color: #39CDCC;
+  background-color: #39cdcc;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -78,7 +77,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  color: #213F7D;
+  color: #213f7d;
 }
 .top-nav-main .logo {
   width: 120px;
@@ -104,7 +103,7 @@
   }
 }
 .top-nav-right a {
-  color: #213F7D;
+  color: #213f7d;
 }
 
 .top-nav-profile {
@@ -116,4 +115,61 @@
   height: 48px;
   width: 48px;
   border-radius: 50%;
-}/*# sourceMappingURL=dashboard.css.map */
+}
+
+.side-nav {
+  background-color: #ffffff;
+  height: 100%;
+  width: 283px;
+  position: fixed;
+  z-index: 1020;
+  box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+@media (max-width: 1024px) {
+  .side-nav {
+    left: -300px;
+    z-index: 1030;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+  }
+  .side-nav.nav-active {
+    left: 0px;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+  }
+}
+.side-nav .side-nav-header {
+  height: 100px;
+  padding-left: 35px;
+  display: flex;
+  align-items: center;
+}
+.side-nav .side-nav-header img {
+  width: 125px;
+}
+.side-nav .side-nav-menu {
+  padding: 30px;
+}
+.side-nav .side-nav-menu .side-nav-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.side-nav .side-nav-menu .side-nav-menu-item.active {
+  background-color: #213f7d;
+  border-radius: 10px;
+  padding: 10px 20px;
+  color: #ffffff;
+}
+.side-nav .side-nav-menu .side-nav-menu-item.active svg {
+  fill: #ffffff;
+}
+.side-nav .side-nav-menu .side-nav-menu-item p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #213f7d;
+} /*# sourceMappingURL=dashboard.css.map */

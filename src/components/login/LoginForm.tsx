@@ -6,6 +6,8 @@ interface Props { }
 
 const LoginForm: FC<Props> = () => {
 	const [showPassword, setShowPassword] = useState(false);
+	const [loading, setLoading] = useState(false);
+
 	const navigate = useNavigate();
 
 	const {
@@ -21,6 +23,13 @@ const LoginForm: FC<Props> = () => {
 		if (data) {
 			reset()
 			navigate('/dashboard');
+			setLoading(true);
+
+			setTimeout(() => {
+				reset();
+				navigate('/dashboard');
+				setLoading(false);
+			}, 2000);
 		}
 	};
 
@@ -70,7 +79,7 @@ const LoginForm: FC<Props> = () => {
 
 				<p>FORGOT PASSWORD?</p>
 
-				<button type="submit"> LOG IN</button>
+				<button type="submit">{loading ? 'Loading...' : 'LOG IN'}</button>
 			</form>
 		</section>
 	);

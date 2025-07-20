@@ -5,8 +5,10 @@ import { useNavigate } from 'react-router-dom';
 interface Props { }
 
 const LoginForm: FC<Props> = () => {
-	const [showPassword, setShowPassword] = useState(false);
-	const [loading, setLoading] = useState(false);
+
+	const [showPassword, setShowPassword] = useState<Boolean>(false);
+	const [loading, setLoading] = useState<Boolean>(false);
+
 
 	const navigate = useNavigate();
 
@@ -14,7 +16,7 @@ const LoginForm: FC<Props> = () => {
 		register,
 		reset,
 		handleSubmit,
-		formState: { errors, isValid },
+		formState: { errors },
 	} = useForm({
 		mode: 'all',
 	});

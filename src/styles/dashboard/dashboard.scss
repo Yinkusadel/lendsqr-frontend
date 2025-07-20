@@ -1,12 +1,25 @@
 @import "../variables/variables.scss";
 
 .dashboard-layout {
-  background-color: #e5e5e5;
+  background-color: #fbfbfb;
   height: 100vh;
   width: 100%;
   position: relative;
-  overflow: hidden;
   font-family: $workSans;
+  .dashboard-container {
+    display: flex;
+    flex-direction: row;
+    @include breakpointDesktop {
+      justify-content: flex-start;
+    }
+  }
+  .dashboard-main {
+    padding: 140px 40px 40px 40px;
+    width: 100%;
+    max-width: 1130px;
+    margin: 0px auto;
+    overflow-y: auto;
+  }
 }
 
 .top-nav {
@@ -100,9 +113,9 @@
 .side-nav {
   font-family: $workSans;
   background-color: #ffffff;
-  height: 100%;
+  height: 100vh;
   width: 283px;
-  position: fixed;
+  position: relative;
   z-index: 1020;
   box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
   overflow-y: auto;
@@ -110,6 +123,7 @@
   scroll-behavior: smooth;
   scrollbar-width: 5px;
   @include breakpointDesktop {
+    position: fixed;
     left: -300px;
     z-index: 1030;
     transition: all 0.5s;

@@ -1,12 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,600;0,700;1,500&display=swap");
 
 .dashboard-layout {
-  background-color: #e5e5e5;
+  background-color: #FBFBFB;
   height: 100vh;
   width: 100%;
   position: relative;
-  overflow: hidden;
   font-family: "Work Sans", sans-serif;
+}
+.dashboard-layout .dashboard-container {
+  display: flex;
+  flex-direction: row;
+}
+@media (max-width: 1024px) {
+  .dashboard-layout .dashboard-container {
+    justify-content: flex-start;
+  }
+}
+.dashboard-layout .dashboard-main {
+  padding: 140px 40px 40px 40px;
+  width: 100%;
+  max-width: 1130px;
+  margin: 0px auto;
+  overflow-y: auto;
 }
 
 .top-nav {
@@ -39,11 +54,11 @@
   border-radius: 5px;
   font-family: "Avenir next", sans-serif;
   font-size: 14px;
-  color: #545f7d;
+  color: #545F7D;
   outline: none;
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
-  border: 1px solid #213f7d;
+  border: 1px solid #213F7D;
   height: 40px;
   opacity: 0.5;
   width: calc(100% - 56px);
@@ -51,8 +66,8 @@
   padding: 0px 12px;
 }
 .top-nav .search-input button {
-  background-color: #39cdcc;
-  color: #ffffff;
+  background-color: #39CDCC;
+  color: #FFFFFF;
   border-radius: 8px;
   border: none;
   padding: 15px 20px;
@@ -64,7 +79,7 @@
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
   width: 56px;
-  background-color: #39cdcc;
+  background-color: #39CDCC;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -77,7 +92,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  color: #213f7d;
+  color: #213F7D;
 }
 .top-nav-main .logo {
   width: 120px;
@@ -103,7 +118,7 @@
   }
 }
 .top-nav-right a {
-  color: #213f7d;
+  color: #213F7D;
 }
 
 .top-nav-profile {
@@ -120,9 +135,9 @@
 .side-nav {
   font-family: "Work Sans", sans-serif;
   background-color: #ffffff;
-  height: 100%;
+  height: 100vh;
   width: 283px;
-  position: fixed;
+  position: relative;
   z-index: 1020;
   box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
   overflow-y: auto;
@@ -130,9 +145,9 @@
   scroll-behavior: smooth;
   scrollbar-width: 5px;
 }
-
 @media (max-width: 1024px) {
   .side-nav {
+    position: fixed;
     left: -300px;
     z-index: 1030;
     transition: all 0.5s;
@@ -157,7 +172,7 @@
   padding: 30px 0px;
 }
 .side-nav .side-nav-menu a {
-  color: #213f7d;
+  color: #213F7D;
   font-size: 16px;
   font-weight: 400;
   text-decoration: none;
@@ -176,7 +191,6 @@
   padding: 10px 30px;
   border-left: 4px solid #39CDCC;
 }
-
 .side-nav .side-nav-menu .nav-item-header {
   padding: 10px 30px;
   color: #545F7D;

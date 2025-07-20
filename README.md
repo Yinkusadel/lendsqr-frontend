@@ -1,46 +1,118 @@
-# Getting Started with Create React App
+# LENDSQR FRONTEND ENGINEERING ASSESSMENT
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Requirements
 
-## Available Scripts
+For development, you will only need Node.js installed on your environment.
 
-In the project directory, you can run:
+### Node
 
-### `npm start`
+[Node.js](http://nodejs.org/) is easy to install and includes [NPM](https://npmjs.org/).  
+You should be able to run the following commands after installation:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+    $ node --version
+    v16.x.x
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+    $ npm --version
+    v8.x.x
 
-### `npm test`
+#### Node installation on OS X
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+You’ll need to use Terminal. On OS X, you can find it in  
+`/Applications/Utilities/Terminal.app`.
 
-### `npm run build`
+Please install [Homebrew](http://brew.sh/) if you haven’t already, using:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Then install Node:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    $ brew install node
 
-### `npm run eject`
+#### Node installation on Linux
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+    $ sudo apt-get update
+    $ sudo apt-get install nodejs npm
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### Node installation on Windows
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Go to [nodejs.org](http://nodejs.org/) and download the installer.  
+Also, ensure `git` is available in your system PATH — `npm` might need it.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+---
 
-## Learn More
+## Install
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Clone the repo and install dependencies:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    $ git clone https://github.com/your-username/lendsqr-frontend.git
+    $ cd lendsqr-frontend
+    $ npm install
+
+---
+
+## Start & watch
+
+Run the development server:
+
+    $ npm start
+
+Visit [http://localhost:3000](http://localhost:3000) in your browser.
+
+---
+
+## Simple build for production
+
+Build the project with:
+
+    $ npm run build
+
+---
+
+## Update dependencies
+
+To keep your packages fresh, occasionally run:
+
+    $ npm prune
+    $ npm install
+
+Or run all together with:
+
+    $ npm run pull
+
+---
+
+## Languages & Tools
+
+### HTML
+
+- Basic HTML5 structure via React
+
+### JavaScript / TypeScript
+
+- React 19 for building UI
+- React Router DOM v7 for routing
+- React Hook Form for form handling
+- TypeScript for static typing
+
+### CSS
+
+- SCSS (Sass) is used for styling
+- Autoprefixer is included (via CRA)
+- `sass` is already added as a dev dependency
+
+---
+
+## Scripts
+
+    $ npm start         # Start dev server
+    $ npm run build     # Create production build
+    $ npm test          # Run tests
+    $ npm run eject     # Eject CRA config (optional)
+
+---
+
+## Notes
+
+- App is bootstrapped using [Create React App](https://create-react-app.dev/).
+- The setup supports SCSS out of the box (via `sass`).
+

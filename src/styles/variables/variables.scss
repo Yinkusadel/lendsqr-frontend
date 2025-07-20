@@ -1,11 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,600;0,700;1,500&display=swap");
 
-@font-face {
-  font-family: "Avenir next";
-  src: local("AvenirNext"),
-    url(/public/avenir-next/AvenirNextLTPro-Regular.otf) format("truetype");
-}
-
 // Colors
 $bluePrimary: #213f7d;
 $textPrimary: #545f7d;
@@ -14,9 +8,9 @@ $greenPrimary: #39cdcc;
 // Fonts
 $workSans: "Work Sans", sans-serif;
 
-$avenirNext: "Avenir next", sans-serif;
+$avenirNext: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$avenirNextBold: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
-$avenirNextBold: "Avenir next bold", sans-serif;
 
 // Breakpoints
 @mixin breakpointMobile {

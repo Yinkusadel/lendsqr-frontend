@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 const userNavItems: String[] = ['General Details', 'Documents', 'Bank Details', 'Loans', 'Savings', 'App and System'];
 
 interface Props {
-    user: any;
+	user: any;
 }
 
-const UserDetailsHeader: FC<Props> = ({user}) => {
+const UserDetailsHeader: FC<Props> = ({ user }) => {
 	return (
 		<div className="user-header">
 			<div className="user-header-info">
@@ -38,7 +38,7 @@ const UserDetailsHeader: FC<Props> = ({user}) => {
 			<div className="user-header-nav">
 				{userNavItems.map((item, index) => {
 					return (
-						<Link to="#">
+						<Link key={index} to="#">
 							<div>{item}</div>
 						</Link>
 					);

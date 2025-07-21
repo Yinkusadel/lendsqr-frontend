@@ -1,5 +1,4 @@
 import { FC } from 'react';
-import '../../styles/dashboard/dashboard.css';
 import { Link } from 'react-router-dom';
 
 interface Props {
@@ -24,16 +23,13 @@ const TopNav: FC<Props> = ({ setIsMenuOpen, isMenuOpen }) => {
 						<img src="/images/icons/bell-icon.svg" alt="notify" />
 						<div className="top-nav-profile">
 							<img src="/images/avatar.svg" alt="avatar" />
-							<p>Olayinka</p>
+							<p>Adedeji</p>
 							<img src="/images/icons/dropdown-icon.svg" alt="Avatar" />
 						</div>
 					</div>
 					<div onClick={() => setIsMenuOpen(!isMenuOpen)} className="menu-icon">
-						{isMenuOpen ? (
-							<img src="/images/icons/close-icon.svg" alt="menu icon" />
-						) : (
-							<img src="/images/icons/menu.svg" alt="menu icon" />
-						)}
+						<img src={`/images/icons/${isMenuOpen ? "close-icon" : "menu"}.svg`} alt="menu icon" />
+
 					</div>
 				</div>
 			</div>

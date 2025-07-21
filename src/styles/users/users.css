@@ -4,7 +4,7 @@
   font-family: "Work Sans", sans-serif;
 }
 .users h1 {
-  color: #213f7d;
+  color: #213F7D;
   font-size: 24px;
   font-weight: 500;
   margin-bottom: 30px;
@@ -51,7 +51,7 @@
 .users .users-stats-box p {
   font-size: 14px;
   font-weight: 500;
-  color: #545f7d;
+  color: #545F7D;
   text-transform: uppercase;
 }
 @media (max-width: 599px) {
@@ -62,7 +62,7 @@
 .users .users-stats-box p:last-child {
   font-size: 24px;
   font-weight: 600;
-  color: #213f7d;
+  color: #213F7D;
   margin-top: 12px;
 }
 @media (max-width: 900px) {
@@ -91,7 +91,7 @@
 .users-table table {
   width: 100%;
   border-collapse: collapse;
-  color: #545f7d;
+  color: #545F7D;
   overflow-x: auto;
 }
 .users-table table thead tr th {
@@ -133,12 +133,19 @@
     max-width: 150px;
   }
 }
+.users-table table tbody tr a {
+  color: #545F7D;
+  text-decoration: none;
+}
+.users-table table tbody tr a:hover {
+  text-decoration: underline;
+}
 
 .users-paginate {
   display: flex;
   justify-content: space-between;
   margin-top: 23px;
-  color: #545f7d;
+  color: #545F7D;
   font-size: 14px;
 }
 @media (max-width: 599px) {
@@ -150,7 +157,7 @@
 }
 .users-paginate .user-page-info span {
   padding: 7px 10px;
-  color: #213f7d;
+  color: #213F7D;
   font-weight: 500;
   background-color: rgba(33, 63, 125, 0.1);
   border-radius: 4px;
@@ -166,7 +173,7 @@
   list-style: none;
 }
 .users-paginate .pagination .active {
-  color: #213f7d;
+  color: #213F7D;
   font-weight: 500;
 }
 .users-paginate .pagination .page-link {
@@ -181,4 +188,4 @@
   justify-content: center;
   background: rgba(33, 63, 125, 0.1);
   border-radius: 4px;
-} /*# sourceMappingURL=users.css.map */
+}/*# sourceMappingURL=users.css.map */

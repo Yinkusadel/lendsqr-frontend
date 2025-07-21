@@ -7,7 +7,7 @@ import ReactPaginate from 'react-paginate';
 import Loader from '../../components/general/Loader';
 
 const Users = () => {
-	const [loading, setLoading] = useState<Boolean>(false);
+	const [loading, setLoading] = useState<Boolean>(true);
 	const [users, setUsers] = useState([]);
 	const [currentItems, setCurrentItems] = useState([]);
 	const [pageCount, setPageCount] = useState(0);
@@ -29,7 +29,7 @@ const Users = () => {
 				setLoading(false);
 			})
 			.catch((error) => {
-				const err = error.response.data;
+				const err = error?.response?.data ?? 'Something went wrong';
 				console.log(err);
 				setLoading(false);
 			});
@@ -49,7 +49,8 @@ const Users = () => {
 		<section className="users">
 			<h1>Users</h1>
 			<div>
-				<UsersStats />
+			<UsersStats data-testid="users-stats" />
+
 
 				{loading ? (
 					<div>

@@ -16,9 +16,9 @@ const tableHeaders = ['Organization', 'Username', 'Email', 'Phone number', 'Date
 const UsersTable: FC<Props> = ({ users, loading }) => {
 	const [isFilterOpen, setIsFilterOpen] = useState<null | Number>(null);
 	const [isOptionsOpen, setIsOptionsOpen] = useState<null | Number>(null);
-	
+
 	return (
-		<div className="users-table">
+		<div className="users-table" data-testid="user-table">
 			<table>
 				<thead>
 					<tr>

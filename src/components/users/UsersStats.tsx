@@ -5,7 +5,7 @@ interface Props {}
 
 const UsersStats: FC<Props> = () => {
 	return (
-		<div className="users-stats">
+		<div className="users-stats" data-testid="users-stats">
 			{usersStats.map((item, index) => {
 				return (
 					<div key={index} className="users-stats-box">

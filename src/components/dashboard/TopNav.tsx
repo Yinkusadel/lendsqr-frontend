@@ -1,5 +1,6 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import { Link } from 'react-router-dom';
+import AccountModal from './AccountModal';
 
 interface Props {
 	setIsMenuOpen: (value: boolean) => void;
@@ -7,6 +8,12 @@ interface Props {
 }
 
 const TopNav: FC<Props> = ({ setIsMenuOpen, isMenuOpen }) => {
+const [isAccountModalOpen, setIsAccountModalOpen] = useState(false);
+
+	const toggleAccountModal = () => {
+		setIsAccountModalOpen(prev => !prev);
+	};
+
 	return (
 		<div className="top-nav">
 			<div>
@@ -21,10 +28,13 @@ const TopNav: FC<Props> = ({ setIsMenuOpen, isMenuOpen }) => {
 					<div className="top-nav-right">
 						<Link to="#">Docs</Link>
 						<img src="/images/icons/bell-icon.svg" alt="notify" />
-						<div className="top-nav-profile">
+						<div className="top-nav-profile"
+							onClick={toggleAccountModal}
+						>
 							<img src="/images/avatar.svg" alt="avatar" />
 							<p>Olayinka </p>
 							<img src="/images/icons/dropdown-icon.svg" alt="Avatar" />
+							{isAccountModalOpen && <AccountModal />}
 						</div>
 					</div>
 					<div onClick={() => setIsMenuOpen(!isMenuOpen)} className="menu-icon">

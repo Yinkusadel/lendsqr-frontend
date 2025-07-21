@@ -1,7 +1,8 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { navItems } from '../../utils/data';
 import { useLocation, useNavigate } from 'react-router-dom';
+import SwitchModal from './SwitchModal';
 
 interface Props {
 	setIsMenuOpen: (value: boolean) => void;
@@ -11,6 +12,12 @@ interface Props {
 const SideBar: FC<Props> = ({ setIsMenuOpen, isMenuOpen }) => {
 	const pathname: String = useLocation().pathname;
 	const navigate = useNavigate();
+
+	const [showSwitchModal, setShowSwitchModal] = useState(false);
+
+	const toggleSwitchModal = () => {
+		setShowSwitchModal(prev => !prev);
+	};
 
 	const isRouteActive = (route: String) => {
 		if (pathname === '/dashboard' && route === '/dashboard') {
@@ -31,27 +38,39 @@ const SideBar: FC<Props> = ({ setIsMenuOpen, isMenuOpen }) => {
 						return (
 							<div key={item.id}>
 								{!item.header ? (
-									<Link to={`${item.link}`}>
-										<li className={`side-nav-menu-item ${isRouteActive(item.link) && 'active'}`}>
-											{!item.header && <img src={item.icon} alt={item.title} />}
+									item.title === 'Switch Organization' ? (
+								  <div className="switch-org-wrapper" key={item.id}>
+    <li
+      className={`side-nav-menu-item ${showSwitchModal ? 'active' : ''}`}
+      onClick={toggleSwitchModal}
+    >
+      <img src={item.icon} alt={item.title} />
+      <span>{item.title}</span>
+      <img src="/images/icons/down-arrow.svg" alt="dropdown arrow" />
+    </li>
 
-											<span>{item.title}</span>
-											{item.id === 1 && (
-												<span>
-													<img src="/images/icons/down-arrow.svg" alt="" />
-												</span>
-											)}
-										</li>
-									</Link>
+    {showSwitchModal && <SwitchModal />}
+  </div>
+									) : (
+										<Link to={`${item.link}`}>
+											<li className={`side-nav-menu-item ${isRouteActive(item.link) && 'active'}`}>
+												<img src={item.icon} alt={item.title} />
+												<span>{item.title}</span>
+											</li>
+										</Link>
+									)
 								) : (
 									<li className="nav-item-header">
 										<span>{item.title}</span>
 									</li>
 								)}
+
 							</div>
 						);
 					})}
 				</ul>
+				{showSwitchModal && <SwitchModal />}
+
 
 				<div className="logout" onClick={() => navigate('/')}>
 					<div>

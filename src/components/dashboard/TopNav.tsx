@@ -24,7 +24,7 @@ const TopNav: FC<Props> = ({ setIsMenuOpen, isMenuOpen }) => {
 						<img src="/images/icons/bell-icon.svg" alt="notify" />
 						<div className="top-nav-profile">
 							<img src="/images/avatar.svg" alt="avatar" />
-							<p>Adedeji</p>
+							<p>Olayinka</p>
 							<img src="/images/icons/dropdown-icon.svg" alt="Avatar" />
 						</div>
 					</div>

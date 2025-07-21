@@ -1,4 +1,3 @@
-
 import { FC, useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import axios from 'axios';
@@ -18,7 +17,6 @@ const UserDetail: FC<Props> = () => {
     await axios
       .get(`${process.env.REACT_APP_API_URL}/users/${id}`)
       .then((response) => {
-        console.log(response.data, 'data');
         setUser(response.data);
         setLoading(false);
       })
@@ -46,7 +44,7 @@ const UserDetail: FC<Props> = () => {
       </div>
       <div>
         <UserDetailsHeader user={user} />
-        <UserDetailsMain />
+        <UserDetailsMain user={user} />
       </div>
     </section>
   );

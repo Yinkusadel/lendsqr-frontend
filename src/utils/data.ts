@@ -15,7 +15,7 @@ export const navItems = [
     {
         title: 'Customers',
         header: true,
-        link: "",
+        link: '',
         id: 3,
     },
     {
@@ -69,7 +69,7 @@ export const navItems = [
     {
         title: 'Businesses',
         header: true,
-        link: "",
+        link: '',
         id: 12,
     },
     {
@@ -129,7 +129,7 @@ export const navItems = [
     {
         title: 'Settings',
         header: true,
-        link: "",
+        link: '',
         id: 22,
     },
     {
@@ -149,6 +149,12 @@ export const navItems = [
         icon: '/images/icons/nav-icon-25.svg',
         link: '#',
         id: 25,
+    },
+    {
+        title: 'Systems Messages',
+        icon: '/images/icons/nav-icon-26.svg',
+        link: '#',
+        id: 26,
     },
 ];
 

@@ -8,7 +8,12 @@
 
 .loader {
   width: 100%;
-  margin-top: 40px;
+  margin-top: 50px;
+  display: flex;
   align-items: center;
   justify-content: center;
-}/*# sourceMappingURL=global.css.map */
+}
+.loader img {
+  width: 50px;
+  height: 50px;
+} /*# sourceMappingURL=global.css.map */

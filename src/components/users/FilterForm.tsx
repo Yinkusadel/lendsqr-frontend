@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { useForm } from 'react-hook-form';
 
-interface Props {}
+interface Props { }
 
 const FilterForm: FC<Props> = () => {
 	const {
@@ -15,7 +15,7 @@ const FilterForm: FC<Props> = () => {
 
 	const onSubmit = (data: any) => {
 		if (data) {
-			console.log(data);
+			// console.log(data);
 		}
 	};
 	return (
